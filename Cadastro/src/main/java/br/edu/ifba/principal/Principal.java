@@ -2,7 +2,7 @@ package br.edu.ifba.principal;
 
 import br.edu.ifba.basicas.Categoria;
 import br.edu.ifba.dao.GetEntityManager;
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 
 public class Principal {
 
@@ -13,7 +13,7 @@ public class Principal {
 		
 		Categoria cat= new Categoria();
 		
-		cat.setDescricao("Vip");
+		cat.setDescricao("Vip 2");
 		
 		em.getTransaction().begin();
 		
