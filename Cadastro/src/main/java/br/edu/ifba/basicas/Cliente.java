@@ -1,12 +1,14 @@
 package br.edu.ifba.basicas;
 
 import java.io.Serializable;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 
 @Entity
@@ -29,6 +31,9 @@ public class Cliente implements Serializable {
 	@JoinColumn(name = "categoria_id", nullable = false)
 	private Categoria categoria;
 	
+//	@ManyToMany(mappedBy = "clientes")
+//	private List<Empresa> empresa;
+	
 	public Cliente(String nome, String cpf, String telefone) {
 		super();
 		this.nome = nome;
@@ -37,6 +42,17 @@ public class Cliente implements Serializable {
 	}
 	
 	public Cliente() {}
+	
+	
+	
+
+//	public List<Empresa> getEmpresa() {
+//		return empresa;
+//	}
+//
+//	public void setEmpresa(List<Empresa> empresa) {
+//		this.empresa = empresa;
+//	}
 
 	public int getId() {
 		return id;
@@ -81,7 +97,7 @@ public class Cliente implements Serializable {
 	@Override
 	public String toString() {
 		return "Cliente [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", telefone=" + telefone + ", categoria="
-				+ categoria + "]";
+				+ categoria.getDescricao() + "]";
 	}
 	
 	
