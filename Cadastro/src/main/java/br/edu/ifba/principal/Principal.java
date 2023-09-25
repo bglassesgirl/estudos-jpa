@@ -69,7 +69,7 @@ public class Principal {
 		ec.setCliente(c1);
 		ec.setEmpresa(a);
 		ec.setStatus("Ativo");
-		
+		//opa
 //		a.setClientes(c);
 		
 //		e.add(a);
