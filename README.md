@@ -1,2 +1,2 @@
 # estudos-jpa
-aulas de banco de dados com JPA e Hibernate 
+aulas de banco de dados com JPA e Hibernate no IFBA
